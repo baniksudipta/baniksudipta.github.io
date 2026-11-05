@@ -1,5 +1,9 @@
 \documentclass[11pt,a4paper]{article}
 
+% --- ATS Optimization ---
+\input{glyphtounicode}
+\pdfgentounicode=1
+
 % --- Packages ---
 \usepackage{cmap} % Improves ATS character recognition
 \usepackage[utf8]{inputenc}
@@ -12,11 +16,20 @@
 \usepackage[none]{hyphenat} % Prevents ATS from splitting words at line breaks
 \definecolor{rulegray}{gray}{0.6}
 
-\usepackage{microtype}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\DisableLigatures{encoding = *, family = * } % Critical for ATS parsing
+
 \usepackage{ragged2e}
 
 \PassOptionsToPackage{hyphens}{url}
 \usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+    pdftitle={Sudipta Banik - Software Engineer Resume},
+    pdfauthor={Sudipta Banik},
+    pdfsubject={Software Engineering Resume},
+    pdfkeywords={Software Engineer, Go, Java, Backend, Distributed Systems, Fintech}
+}
 
 \pretolerance=1000
 \tolerance=2000

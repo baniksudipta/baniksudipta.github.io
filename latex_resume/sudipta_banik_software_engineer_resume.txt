@@ -1,18 +1,18 @@
                                        SUDIPTA BANIK
-    (+91) 9051073567     |   sudiptabanik.dev@gmail.com   |   linkedin.com/in/sudipta-banik   |    Bangalore, India
+    (+91) 9051073567     |   sudiptabanik.dev@gmail.com   |   linkedin.com/in/sudipta-banik   |   Bangalore, India
 
 
 SUMMARY
 Software Engineer with 7 years of experience at Uber, Grab, and FourKites specializing in scalable, fault-tolerant
-distributed systems and event-driven backends. Proﬁcient in Go, Java, SQL, Redis, and Kafka. Drove backend
+distributed systems and event-driven backends. Proficient in Go, Java, SQL, Redis, and Kafka. Drove backend
 projects end to end, from design to production, across systems handling millions of transactions or events daily,
-spanning ﬁntech, distributed compute, and global logistics domains. Open to relocation.
+spanning fintech, distributed compute, and global logistics domains. Open to relocation.
 
 WORK EXPERIENCE
 
 UBER
-Software Engineer II                                                                               Oct 2024 - Present
-Mobility & Batch Compute Teams                                                                       Bangalore, India
+Software Engineer II                                                                              Oct 2024 - Present
+Mobility & Batch Compute Teams                                                                      Bangalore, India
 • Architected the Uber Moto rider preferences feature, modifying core trip-lifecycle services to surface the
   data to drivers pre-trip. Drove cross-team alignment, development and deployed changes handling nearly
   80 QPS during the initial regional launch.
@@ -20,19 +20,19 @@ Mobility & Batch Compute Teams                                                  
   validation, eliminating legacy infrastructure costs.
 • Enhanced YARN router fault tolerance by implementing strict router-to-cluster timeouts and a
   ZooKeeper-backed router CLI to dynamically isolate degraded clusters, preventing cascading failures.
-• Implemented a tiered workload protection layer in batch Kube federator to safeguard business-critical jobs,
-  using real-time conﬁgMap driven policy enforcement to manage system outages and guarantee resources
-  for high priority operations.
+• Implemented a tiered workload protection layer in batch Kube federator to safeguard business-critical
+  jobs, using real-time configMap driven policy enforcement to manage system outages and guarantee
+  resources for high priority operations.
 • Automated deployment safety for Apache YARN by building a Cadence-backed E2E testing framework and
   integrating it directly into the continuous delivery pipeline.
 • Optimized internal Kubernetes management platforms, improving page load times via cursor-based
   pagination and enhancing batch job observability with queue metric navigation and resource-usage
   heatmaps.
 GRAB
-Senior Software Engineer                                                                          Oct 2023 - Oct 2024
-Lending Core Team, Fintech                                                                            Bangalore, India
-• Redesigned the loan oﬀer and credit limit generation from a monthly batch job to real-time event-driven
-  processing using Kafka, reducing peak DB load by ~30% and reducing loan oﬀer waiting time for millions of
+Senior Software Engineer                                                                      Oct 2023 - Oct 2024
+Lending Core Team, Fintech                                                                        Bangalore, India
+• Redesigned the loan offer and credit limit generation from a monthly batch job to real-time event-driven
+  processing using Kafka, reducing peak DB load by ~30% and reducing loan offer waiting time for millions of
   drivers.
 • Reduced loan creation API p95 latency by almost 32% via MySQL batch inserts for instalment. The
   reduction in network round-trips and lock acquisitions improved throughput during high-concurrency
@@ -40,18 +40,18 @@ Lending Core Team, Fintech                                                      
 • Developed a sub-second data aggregator API integrating 5+ internal APIs for banking partners; with partial
   response fallback for high availability.
 • Improved the internal Kafka consumer framework reliability via graceful shutdown re-queuing, reducing
-  message loss to near zero across ﬁnancial transaction pipelines.
+  message loss to near zero across financial transaction pipelines.
 • Mentored 2 new engineers, guiding them through internal systems, code reviews, and initial deliverables to
   maintain team velocity and quality.
-Software Engineer                                                                                 Oct 2021 - Sep 2023
-Lending PayLater Team, Fintech                                                                        Bangalore, India
+Software Engineer                                                                             Oct 2021 - Sep 2023
+Lending PayLater Team, Fintech                                                                    Bangalore, India
 • For Grab’s Indonesia PayLater launch, designed and scaled the Refund API to handle 10% of the country’s
   user base. Used idempotent and state machine design patterns, automating retries, error recovery and
-  complex refund ﬂows, which handled 3M+ users gracefully.
+  complex refund flows, which handled 3M+ users gracefully.
 • Built a tiered service fee module for real-time charge APIs and batch billing systems, implementing
   slab-rate logic per Indonesian regulatory requirements.
-• Designed a conﬁgurable credit risk assessment module, collaborating with product teams and external
-  credit bureaus to integrate country-speciﬁc requirements across multiple Southeast Asian markets.
+• Designed a configurable credit risk assessment module, collaborating with product teams and external
+  credit bureaus to integrate country-specific requirements across multiple Southeast Asian markets.
 • Developed a robust lending credit score API, integrating credit score from data-science team models and
   user metadata services, ensuring adherence to REST API design and security best practices.
 • Improved CI/CD build speeds by ~18% and increased unit test coverage by ~35% through Go version
@@ -61,22 +61,22 @@ FOURKITES INC.
 Software Engineer                                                                         Jun 2019 - Oct 2021
 Multimodal Supply Chain Visibility Team                                                         Chennai, India
 • Architected a Redis-backed caching layer to enable direct integration with 10+ global maritime carriers,
-  reducing reliance on costly third-party data providers. Designed carrier-speciﬁc conﬁgs to comply with API
-  rate limits and built end-to-end data parsers and update ﬂows.
+  reducing reliance on costly third-party data providers. Designed carrier-specific configs to comply with API
+  rate limits and built end-to-end data parsers and update flows.
 • Improved global address search API availability by replacing a shared Elasticsearch dependency with a
   dedicated Port Autocomplete API utilising composite SQL indexing and in-memory cache for 80,000+ ports
   and achieved sub-100ms latency.
 • Designed an async Kafka-based maritime event enrichment pipeline for ETA/ETD updates by integrating
-  data from multiple internal microservices into a uniﬁed callback payload ensuring event persistence,
-  conﬁgurability, and reliable real-time shipment update delivery to customers.
+  data from multiple internal microservices into a unified callback payload ensuring event persistence,
+  configurability, and reliable real-time shipment update delivery to customers.
 • Eliminated error-prone QA processes by replacing SSH-based Ruby script execution with an internal
-  shipment event simulation tool with dropdown-driven UI, event-speciﬁc data ﬁelds, and background worker
-  integration.
-• Added ocean-speciﬁc features to the shipment cloning module, enabling domain-speciﬁc data replication
+  shipment event simulation tool with dropdown-driven UI, event-specific data fields, and background
+  worker integration.
+• Added ocean-specific features to the shipment cloning module, enabling domain-specific data replication
   that improved accuracy and impact of new client sales demos.
 
 EDUCATION
-Jadavpur University                                                                      Aug 2015 – Aug 2019
+Jadavpur University                                                                      Aug 2015 -- Aug 2019
 Bachelor of Engineering in Electrical Engineering                                               Kolkata, India
 Result: CGPA: 7.91/10
 
@@ -98,5 +98,5 @@ NP-hard problem coupling TSP and 0/1 knapsack selection, under the guidance of a
 Institute, Kolkata.                                               Source: github.com/baniksudipta/ttp_project
 
 LANGUAGES
-English: Full Professional Proﬁciency     Bengali: Native
+English: Full Professional Proficiency    Bengali: Native
 

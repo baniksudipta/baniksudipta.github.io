@@ -19,4 +19,8 @@ cp "$TEX.pdf" ~/Downloads/Resumes/"$PDF_OUT"
 
 echo "Done. PDF copied to ../ and ~/Downloads/Resumes/"
 
-pdftotext -layout sudipta_banik_software_engineer_resume.pdf
+# Run ATS Validator
+if [ -f "validate_ats.py" ]; then
+    echo "Running ATS Friendliness Validator..."
+    python3 validate_ats.py "$TEX.pdf"
+fi
