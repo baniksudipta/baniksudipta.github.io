@@ -80,12 +80,26 @@ def check_ats_friendliness(pdf_path):
     try:
         layout_text = subprocess.check_output(['pdftotext', '-layout', pdf_path, '-']).decode('utf-8', errors='ignore')
         
-        # Check for overlapping or merged words
-        merged_keywords = re.findall(r'[a-z][A-Z]', layout_text)
-        if merged_keywords:
-             print(f"[WARN] Potential merged words detected (e.g., {merged_keywords[:3]}). Check spacing.")
+        # # Check for overlapping or merged words
+        # merged_keywords = re.findall(r'[a-z][A-Z]', layout_text)
+        # if merged_keywords:
+        #      print(f"[WARN] Potential merged words detected (e.g., {merged_keywords[:3]}). Check spacing.")
+        # else:
+        #      print("[OK] No obvious word merging detected.")
+
+        ALLOWED_CAMEL = {
+            "FourKites", "ZooKeeper", "MySQL", "PostgreSQL", "TypeScript",
+            "PayLater", "MongoDB", "GitHub", "LinkedIn", "PayLater",
+            "ConfigMap", "DataDog", "SpringBoot", "gRPC"
+        }
+        camel_tokens = set(re.findall(r'\b\w*[a-z][A-Z]\w*\b', layout_text))
+        suspicious = sorted(t for t in camel_tokens if t not in ALLOWED_CAMEL)
+
+        if suspicious:
+            print(f"[WARN] Possible merged words: {suspicious}")
+            print("       Review these. CamelCase product names are fine; add them to ALLOWED_CAMEL.")
         else:
-             print("[OK] No obvious word merging detected.")
+            print("[OK] No unexpected merged words detected.")
 
         # Check if standard sections are found
         sections = ["Experience", "Education", "Skills", "Projects"]

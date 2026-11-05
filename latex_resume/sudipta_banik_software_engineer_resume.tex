@@ -100,12 +100,11 @@
 {Mobility \& Batch Compute Teams}
 {Bangalore, India}
 {
-    \item \textbf{Architected the Uber Moto rider preferences feature}, modifying core trip-lifecycle services to surface the data to drivers pre-trip. Drove cross-team alignment, development and deployed changes handling nearly \textbf{80 QPS} during the initial regional launch.
-    \item \textbf{Led a zero-downtime migration} from zonal Cassandra to regional DBs using \textbf{dual-writes and shadow validation}, eliminating legacy infrastructure costs.
-    \item \textbf{Enhanced YARN router fault tolerance} by implementing strict router-to-cluster timeouts and a ZooKeeper-backed router CLI to \textbf{dynamically isolate degraded clusters}, preventing cascading failures.
-    \item \textbf{Implemented a tiered workload protection layer in batch Kube federator} to safeguard \textbf{business-critical jobs}, using real-time configMap driven policy enforcement to manage system outages and guarantee resources for \textbf{high priority operations}.
-    \item \textbf{Automated deployment safety for Apache YARN} by building a Cadence-backed E2E testing framework and \textbf{integrating it directly into the continuous delivery pipeline}.
-    \item \textbf{Optimized internal Kubernetes management platforms}, improving page load times via cursor-based pagination and enhancing batch job observability with queue metric navigation and resource-usage heatmaps.
+    \item \textbf{Designed Uber Moto rider preferences} for the core trip path and aligned service owners across teams on the approach before implementing the rider and driver backend changes. Rolled it out city by city across LATAM through experiments.
+    \item \textbf{Led migration of a Kubernetes job-status service from zonal to regional Cassandra}, removing a per-cluster provisioning burden on the Cassandra team. Validated the data by having the background resource-usage service, which feeds financial reporting, compare reads from both databases and emit mismatch metrics.
+    \item \textbf{Made the YARN router tolerate a failed cluster}: added per-cluster call timeouts and a ZooKeeper-backed soft-block, so a single degraded cluster no longer failed requests for clients like Spark, which now received partial results from the healthy clusters.
+    \item \textbf{Designed and built Cadence-based test-gated deployments for Apache YARN}, where a build that passes validation on a low-tier cluster triggers the existing pipeline without manual approval, saving manual release effort across the team.
+    \item \textbf{Built a policy-based admission layer in the batch Kubernetes federator} that checks workloads at creation against configurable rules served from a cache, then helped extend it for a separate project that reused it.
 }
 
 \vspace{2pt}
